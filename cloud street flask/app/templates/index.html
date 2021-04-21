@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <meta name="author" content="Jiawen Zhang" />
+    <title>Cloud Street Checker</title>
+    <!-- CSS  -->
+    <link href="../static/css/mystyle.css" type="text/css" rel="stylesheet" media="screen,projection"/> 
+      <!-- <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="sscreen,projection"/> -->
+<!-- <link
+      href="mystyle.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    /> -->
+  </head> -->
+
+  <body>
+    <header>
+      <div class="bancontainer">
+        <h1 class="logo" style="font-size: 2rem;">CLOUDSTREET<span>CHECKER</span></h1>
+        <section class="social">
+          <a class="btn" href="https://github.com/jiawenanan/CloudStreetChecker"
+            ><b>Github</b></a
+          >
+        </section>
+      </div>
+    </header>
+
+    <!-- navigator bar -->
+    <div class="bar">
+      <ul style="list-style-type:none;">
+        <li><a id = "nav" href="#">&#8962 HOME</a></li>
+        <br>
+        <li><a id = "nav" href="https://en.wikipedia.org/wiki/Cloudstreet">&#9729 CLOUD STREET</a></li>
+        <br>
+        <br>
+        <li><a id = "nav" href="https://github.com/NASA-IMPACT/data_share">NASA DATASET</a></li>
+        <br>
+        <br>
+        <li><a id = "nav" href="#">ABOUT US</a></li>
+      </ul>
+    </div>
+
+    <!-- planet -->
+    <div class="planetcontainer">
+      <!-- stars -->
+      <div class="star star-1"></div>
+      <div class="star star-2"></div>
+      <div class="star star-3"></div>
+      <!-- clouds -->
+      <div class="cloud-group-1">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="cloud cloud-5"></div>
+        <div class="cloud cloud-6"></div>
+      </div>
+      <div class="cloud-group-2">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="cloud cloud-5"></div>
+        <div class="cloud cloud-6"></div>
+      </div>
+      <div class="cloud-group-3">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+        <div class="cloud cloud-5"></div>
+        <div class="cloud cloud-6"></div>
+      </div>
+      <!-- orbits -->
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3"></div>
+      <div class="orbit orbit-4"></div>
+      <div class="orbit orbit-5"></div>
+      <div class="orbit orbit-6"></div>
+      <!-- main planet -->
+      <div class="ring-before"></div>
+      <div class="ring-bigger-before"></div>
+      <div class="planet"></div>
+      <div class="ring-after"></div>
+      <div class="ring-bigger-after"></div>
+      <!-- sub planet -->
+      <div class="sub-planet"></div>
+    </div>
+
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="precontainer">
+        <div class="row">
+          <form action='/' method="post" class="col s12" enctype="multipart/form-data">
+            <div class="row">
+
+              <div class="input-field col s5" style="margin-left: 20px; margin-top: 50px">
+                <div class = "row">
+
+                    <div class="row">
+                      <label for="first_name" style="color: #8970ba; font-weight:bold">Upload Image</label><br>
+                      <div class = "file-field input-field">
+                        <div class = "btn">
+                          <span style="font-size: 10px; font-weight:bold">&#128421 Browse</span>
+                          <br>
+                          <input type = "file" name="image_upload" id="image_upload"/>
+                        </div>
+                        <div class = "file-path-wrapper">
+                          <input class = "file-path validate" type = "text" placeholder = "Image format requirement: length > 375px, width > 375px" name="image_name" id="image_name" />
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="row center" style="margin-top: 50px ">
+                      <button id="submit" type="submit" class="btn-large" style="background-color: black"）><b>&#128161 Predict</b></button>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="input-field col s3">
+                <div style="text-align: center; position: relative; margin-top: 0%;">
+                  <img src="{{ url_for('static',filename=full_filename) }}" width="375" height="300">
+                  <div>
+                      <h5 style = "color: white; font-size: 25px;">{{ pred }}</h5>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+    </div>
+
+    <!-- <div class="continue">
+    </div> -->
+    <div class="continue">
+      <h6 >CONTINUE</h6>
+      <h6>&#10507</h6>
+    </div>
+
+    <!-- feedback form -->
+    <div class="feedback">
+      <h6>GIVE US YOUR ADVICE</h6>
+
+    <form id="fdbkform" class="topBefore">
+        
+          <input id="name" type="text" style="color: white" placeholder="NAME">
+          <input id="email" type="text" placeholder="E-MAIL" style="color: white;">
+          <textarea id="message" type="text" placeholder="FEEDBACK" style="color: white;"></textarea>
+      <input id="fdbksubmit" type="submit" value="GO!">
+      
+    </form>
+    </div>
+    
+
+    <div class = "link">
+      <h1>&#128279 Related Links</h1>
+      <a href="https://en.wikipedia.org/wiki/Cloudstreet">CLOUDSTREET WIKI</a>
+      <span>&</span>
+      <a href="https://github.com/NASA-IMPACT/data_share">NASA DATASET</a>
+    </div>
+
+    
+    
+    <!--  Scripts-->
+    <!-- <script src="./static/js/cloud.js"></script> -->
+    <script src="../static/js/mystyle.js"></script>
+    <script type="text/javascript">
+      document.getElementById("image_upload").onchange = function () {
+        document.getElementById("image_name").value = this.value.slice(12, 100);
+      };
+    </script>
+  </body>
+</html>
+
